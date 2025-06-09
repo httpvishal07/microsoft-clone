@@ -1,0 +1,522 @@
+/* Colors */
+:root {
+    --black-color: #000;
+    --grey-color: #333;
+    --white-color: #fff;
+}
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+img { width: 100%; }
+
+h1,h2,h3,h4,h5,h6 { line-height: 1.3; }
+
+p {
+    line-height: 1.3;
+    margin: 5px 0;
+}
+
+a { 
+    text-decoration: none;
+    color: var(--grey-color);
+}
+
+ul { list-style-type: none; }
+
+li {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+/* NavBar */
+.navbar .container {
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.navbar a { font-size: 12px; }
+
+.navbar li a:hover { border-bottom: 2px solid #000; }
+
+.navbar img {
+    width: 110px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Prevents resizing */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay Text on Left */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    text-align: left;
+    background: white; /* Maintains white background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.overlay-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.overlay-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+
+/* Navigation Buttons */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Image Container (Only Two Images) */
+.image-container {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    text-align: left;
+    padding: 20px;
+}
+
+/* First Image - No Background */
+.image-container:first-child .overlay-text {
+    background: none;
+    box-shadow: none;
+}
+
+/* Second Image - White Background */
+.image-container:last-child .overlay-text {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: #0078d4;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background: #005ea2;
+}
+
+/* Controls Below Image */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.controls button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Products */
+.products .container { 
+    justify-content: center; 
+    text-align: center;
+}
+
+.products img {
+    width: 100px;
+    height: 40px;
+} 
+
+.products .products-card {
+    max-width: 140px;
+    margin: 40px 20px;
+    color: #0078d4;
+    
+}
+
+.products .products-card:hover { 
+    text-decoration: underline; 
+    background-color: none ;
+}
+
+/* About Products */
+/* Products Section */
+/* Product Card */
+.product-card {
+    position: relative; /* Enables absolute positioning inside */
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    max-width: 320px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    padding: 15px;
+}
+
+/* Product Image */
+/* Product Image - Increased Size */
+.product-card img {
+    width: 100%; /* Fill container */
+    max-width: 400px; /* Ensure larger size */
+    height: 400px; /* Explicit height increase */
+    display: block;
+    border-radius: 4px;
+    object-fit: contain; /* Prevents distortion */
+}
+
+
+
+/* Learn More Button */
+.product-info a {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0078d4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+
+.product-info a:hover {
+    background: #005ea2;
+}
+
+
+
+
+
+
+
+/* Hero 2 */
+
+   .hero-2 {
+    position: relative;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Positioning text on the left side over the image */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Moves content toward the left side */
+    transform: translateY(-50%);
+    text-align: left;
+    color: white; /* Ensures visibility */
+    width: 40%; /* Limits text width to enforce wrapping */
+    word-wrap: break-word;
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Adding spacing between elements */
+.content h3 {
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.content p {
+    max-width: 350px; /* Adjust this value based on font size to match 10-11 words per line */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Button Styling */
+.blue-btn,
+.black-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px; /* Adds spacing between buttons */
+}
+
+/* Blue button styling */
+.blue-btn {
+    background: #0078d4; /* Microsoft Blue */                           
+    color: white;
+}
+
+.blue-btn:hover {
+    background-color:blue;
+}
+
+/* Black button styling */
+.black-btn {
+    background-color: black;
+    color: white;
+}
+
+.black-btn:hover {
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+/* About Products */
+/* Products Section */
+.products-section {
+    text-align: center; 
+    padding: 50px 20px;
+    background: white;
+}
+
+.products-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Ensures responsiveness */
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Product Info */
+.product-info {
+    padding: 15px 0;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.product-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Learn More Button */
+.product-info a {
+    display: inline-block;
+    background: #0078d4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-info a:hover {
+    background: #005ea2;
+}
+
+
+/* Socialize Section */
+.socialize p { margin-right: 10px;}
+
+.socialize img {
+    width: 25px;
+    height: 25px;
+}
+
+.socialize ul, .socialize li {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+/* Footer */
+.customer-footer { background: #F2F2F2; }
+
+.upper-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customer-footer .upper-footer ul, .customer-footer .upper-footer li {
+    margin: 0;
+    padding: 0;
+}
+
+.customer-footer .upper-footer nav {
+    width: 28vh;
+    padding: 40px 0;
+}
+
+footer h3 {
+    font-size: 16px;
+    color: #616161;
+    margin: 10px 0;
+}
+
+.customer-footer .upper-footer li {
+    font-size: 11px;
+    color: #616161;
+    margin: 10px 0;
+}
+
+.customer-footer .lower-footer { justify-content: space-between; }
+
+.customer-footer .lower-footer {
+    font-size: 11px;
+    color: #616161;
+    margin-bottom: 20px;
+}
+
+.customer-footer .upper-footer li:hover, 
+.customer-footer .lower-footer li:hover,
+.customer-footer .lower-footer p:hover
+{
+    text-decoration: underline;
+}
+
+.customer-footer .lower-footer i { 
+    margin-right: 10px;
+    font-size: 20px;
+}
